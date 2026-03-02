@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component, input, OnDestroy, OnInit, output, ViewEncapsulation } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Product } from '../product';
 
 @Component({
   selector: 'app-product-detail',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css',
   encapsulation: ViewEncapsulation.None,

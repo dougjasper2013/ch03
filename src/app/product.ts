@@ -1,4 +1,6 @@
 export interface Product {
     id: number;
-    title: string
+    title: string;
+    price: number;
+    categories: Record<number, string>;
 }
