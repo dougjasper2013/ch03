@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Product } from '../product';
+import { ProductDetailComponent } from '../product-detail/product-detail.component';
 
 @Component({
   selector: 'app-product-list',
-  imports: [],
+  imports: [ProductDetailComponent],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
@@ -14,4 +15,10 @@ export class ProductListComponent {
     { id: 3, title: 'Web camera' },
     { id: 4, title: 'Tablet' }
   ];
+
+  selectedProduct: Product | undefined = this.products[0];
+
+  onAdded(product: Product) {
+  alert(`${product.title} added to the cart!`);
+}
 }
